@@ -1,8 +1,13 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
+import * as session from  'express-session'
+
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+  // app.enableCors()
+  app.use(session({ secret: "XiaoHe", name: "xm.session", rolling: true, cookie: { maxAge: null } }))
+  
   await app.listen(3000);
 }
 bootstrap();
