@@ -6,7 +6,7 @@ import { dbConfig } from './ustils/dbConfig';
 import { UserModule } from './user/user.module';
 
 @Module({
-  imports: [TypeOrmModule.forRoot((dbConfig()as any)), UserModule],
+  imports: [TypeOrmModule.forRoot(dbConfig() as any), UserModule],
   controllers: [AppController],
   providers: [AppService],
 })

@@ -11,14 +11,14 @@ export class UserService {
   findAll(req) {
     return `This action returns all user`;
   }
-  getseession(req){
-    return 123
+  getseession(req) {
+    return 123;
   }
-  getcode(){
-    return 'code'
+  getcode() {
+    return 'code';
   }
-  findOne(id: number,Header:any) {
-    return JSON.stringify(Header)+`This action returns a #${id} user`;
+  findOne(id: number, Header: any) {
+    return JSON.stringify(Header) + `This action returns a #${id} user`;
   }
 
   update(id: number, updateUserDto: UpdateUserDto) {
